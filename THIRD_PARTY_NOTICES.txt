@@ -1,0 +1,39 @@
+Third-party sources
+
+The replay kits preserve the license text and notices supplied with the source fixtures.
+The root license does not replace these upstream terms.
+
+EVALUATOR_LAYOUT_REPLAY_KIT_v1.zip
+
+Jsoup, jhy/jsoup, developer commit 001752f1a0b73ae17668dc9fd4c5942424a6c1e2.
+MIT license in cases/jsoup/LICENSE. Authored candidate changes are labelled.
+
+Apache Commons Codec, apache/commons-codec, developer commit d594dd25868063be2ea5a7744123393d66cad479.
+Apache License 2.0 and notices in cases/codec/LICENSE.txt and cases/codec/NOTICE.txt.
+
+The original TEBench annotation predicate is fetched from public revision
+5f607183bd9f29b6c740eae76b0489dd0c7556d5 during setup and hash-checked.
+The kit's THIRD_PARTY_NOTICES.txt and PROVENANCE.json retain source details.
+
+GEMMA_PAIRED_REPAIR_REPLAY_KIT_v2.zip
+
+Jsoup MIT license in kit/cases/jsoup/LICENSE.
+Commons Codec Apache License 2.0 and notices in kit/cases/codec_standard and kit/cases/codec_url.
+Commons Lang Apache License 2.0 and notices in kit/cases/lang.
+JFreeChart GNU LGPL 2.1 or later in kit/cases/jfreechart/licence-LGPL.txt.
+kit/PLAN.json and evidence/PLAN.json identify the source commits.
+THIRD_PARTY_NOTICE_RECEIPTS.json records upstream license URLs and SHA256 digests.
+Research faults and scaffolds are marked modifications.
+
+TEBench source is excluded from the notebook and replay archives.
+The notebook and secondary setup fetch the exact functions from the pinned public
+upstream revision and verify complete-source and extracted-function SHA256 hashes.
+Downloaded source stays in the reproducer's local cache. Setup writes the extracted
+predicate to kit/released_predicate.py. Both paths are excluded by .gitignore.
+No upstream software license was identified at that revision. This toolkit grants
+no license to the fetched TEBench source.
+
+Gemma model records identify the official model revisions used for the saved outputs.
+No model weights are redistributed. JaCoCo 0.8.11 and other dependency artifacts
+are downloaded separately under their upstream terms. The JaCoCo instrumentation
+manifest and dependency manifests identify the exact artifacts.
