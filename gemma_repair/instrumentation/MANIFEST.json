@@ -1,0 +1,12 @@
+{
+  "agent.jar": {
+    "bytes": 300661,
+    "sha256": "47257ae9f22b93817eea11bc1b1fd31fc8e23049ad5dd483bfde603eaa624d0b",
+    "url": "https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.agent/0.8.11/org.jacoco.agent-0.8.11-runtime.jar"
+  },
+  "cli.jar": {
+    "bytes": 583967,
+    "sha256": "ff833821be04f31a0b8618906c287005d7c88e524602845dc8605efe22b5df5a",
+    "url": "https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.cli/0.8.11/org.jacoco.cli-0.8.11-nodeps.jar"
+  }
+}

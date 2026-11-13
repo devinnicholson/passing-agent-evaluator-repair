@@ -1,0 +1,278 @@
+{
+  "jsoup-1729-released": {
+    "raw_sha256": "debb5573c6e98fb6d5863afe63f9adeef5c8ffd79beb50dba13872fcbc905173",
+    "normalized_sha256": "2651eb0956da41d322a71353b4b048ab5bdc06327a1596586bb6f0919cae3ba8",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": false,
+      "request": "jsoup-1729-repair-released"
+    }
+  },
+  "jsoup-1729-repaired": {
+    "raw_sha256": "debb5573c6e98fb6d5863afe63f9adeef5c8ffd79beb50dba13872fcbc905173",
+    "normalized_sha256": "2651eb0956da41d322a71353b4b048ab5bdc06327a1596586bb6f0919cae3ba8",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": false,
+      "request": "jsoup-1729-repair-released"
+    }
+  },
+  "codec_standard-1729-released": {
+    "raw_sha256": "19535d0a4519a777d5813a69efe1719167f9210a23527bd432bcbf8289dea1f2",
+    "normalized_sha256": "19535d0a4519a777d5813a69efe1719167f9210a23527bd432bcbf8289dea1f2",
+    "one_terminal_turn_marker_removed": false,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": false,
+      "request": "codec_standard-1729-repair-released"
+    }
+  },
+  "codec_standard-1729-repaired": {
+    "raw_sha256": "19535d0a4519a777d5813a69efe1719167f9210a23527bd432bcbf8289dea1f2",
+    "normalized_sha256": "19535d0a4519a777d5813a69efe1719167f9210a23527bd432bcbf8289dea1f2",
+    "one_terminal_turn_marker_removed": false,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": false,
+      "request": "codec_standard-1729-repair-released"
+    }
+  },
+  "codec_url-1729-released": {
+    "raw_sha256": "182d0cce21d635a464e7fa1d75df2bca5f312c95c54fe88e656601cd0e87a1ee",
+    "normalized_sha256": "0a6a667459c87f18730f8e95cafa66fb14c3c3778cb2bfdadbb40cef2dce6c60",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": false,
+      "request": "codec_url-1729-repair-released"
+    }
+  },
+  "codec_url-1729-repaired": {
+    "raw_sha256": "182d0cce21d635a464e7fa1d75df2bca5f312c95c54fe88e656601cd0e87a1ee",
+    "normalized_sha256": "0a6a667459c87f18730f8e95cafa66fb14c3c3778cb2bfdadbb40cef2dce6c60",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": false,
+      "request": "codec_url-1729-repair-released"
+    }
+  },
+  "lang-1729-released": {
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "one_terminal_turn_marker_removed": false,
+    "semantic_edits": false,
+    "model_output_status": "timeout_no_response",
+    "missing_reason": "TimeoutError timed out",
+    "stop_type": "no_response",
+    "truncated": null,
+    "route": {
+      "retained_initial": false,
+      "request": "lang-1729-repair-released"
+    }
+  },
+  "lang-1729-repaired": {
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "one_terminal_turn_marker_removed": false,
+    "semantic_edits": false,
+    "model_output_status": "timeout_no_response",
+    "missing_reason": "TimeoutError timed out",
+    "stop_type": "no_response",
+    "truncated": null,
+    "route": {
+      "retained_initial": false,
+      "request": "lang-1729-repair-released"
+    }
+  },
+  "jfreechart-1729-released": {
+    "raw_sha256": "b298453bc37a861035aa4005fa66368875dee354082026a1f70eb0b620e2de50",
+    "normalized_sha256": "8169dd1e5f8a5a53311633e2a79f7b17c6a90dd71300900cefeeeb3557fb6404",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": false,
+      "request": "jfreechart-1729-repair-released"
+    }
+  },
+  "jfreechart-1729-repaired": {
+    "raw_sha256": "b298453bc37a861035aa4005fa66368875dee354082026a1f70eb0b620e2de50",
+    "normalized_sha256": "8169dd1e5f8a5a53311633e2a79f7b17c6a90dd71300900cefeeeb3557fb6404",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": false,
+      "request": "jfreechart-1729-repair-released"
+    }
+  },
+  "jfreechart-2718-released": {
+    "raw_sha256": "1ffe2835841d585830a863ec9646c3e00bbf269b05595d8c4e0feb0930cb398d",
+    "normalized_sha256": "85418fd630ecbfdfbeae1d1aa78b146df55df3ab40dd5d9ba43eb5e8412302eb",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": true
+    }
+  },
+  "jfreechart-2718-repaired": {
+    "raw_sha256": "1ffe2835841d585830a863ec9646c3e00bbf269b05595d8c4e0feb0930cb398d",
+    "normalized_sha256": "85418fd630ecbfdfbeae1d1aa78b146df55df3ab40dd5d9ba43eb5e8412302eb",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": true
+    }
+  },
+  "lang-2718-released": {
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "one_terminal_turn_marker_removed": false,
+    "semantic_edits": false,
+    "model_output_status": "timeout_no_response",
+    "missing_reason": "TimeoutError timed out",
+    "stop_type": "no_response",
+    "truncated": null,
+    "route": {
+      "retained_initial": false,
+      "request": "lang-2718-repair-released"
+    }
+  },
+  "lang-2718-repaired": {
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "one_terminal_turn_marker_removed": false,
+    "semantic_edits": false,
+    "model_output_status": "timeout_no_response",
+    "missing_reason": "TimeoutError timed out",
+    "stop_type": "no_response",
+    "truncated": null,
+    "route": {
+      "retained_initial": false,
+      "request": "lang-2718-repair-released"
+    }
+  },
+  "codec_url-2718-released": {
+    "raw_sha256": "d46a26aa6a6bf914cac0ccf34382b1a7afc0f11d386b0214659b962373f36ea3",
+    "normalized_sha256": "7338f1944a855631d254be261a9973096bd8d6ab426467d9bc35b6edfadee848",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": false,
+      "request": "codec_url-2718-repair-released"
+    }
+  },
+  "codec_url-2718-repaired": {
+    "raw_sha256": "d46a26aa6a6bf914cac0ccf34382b1a7afc0f11d386b0214659b962373f36ea3",
+    "normalized_sha256": "7338f1944a855631d254be261a9973096bd8d6ab426467d9bc35b6edfadee848",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": false,
+      "request": "codec_url-2718-repair-released"
+    }
+  },
+  "codec_standard-2718-released": {
+    "raw_sha256": "114dce42b6fe63d404962cc8a24b3c390f9fd08c5e66b6ffad63886b1cc7cf4e",
+    "normalized_sha256": "2a38aa3d91e6dfdf3277a8eae1b3afb59d0661686a12422cefcc7589169e9807",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": false,
+      "request": "codec_standard-2718-repair-released"
+    }
+  },
+  "codec_standard-2718-repaired": {
+    "raw_sha256": "114dce42b6fe63d404962cc8a24b3c390f9fd08c5e66b6ffad63886b1cc7cf4e",
+    "normalized_sha256": "2a38aa3d91e6dfdf3277a8eae1b3afb59d0661686a12422cefcc7589169e9807",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": false,
+      "request": "codec_standard-2718-repair-released"
+    }
+  },
+  "jsoup-2718-released": {
+    "raw_sha256": "2dd93b447649ecc2b361949a98a64977b7249df465cfb1779c56d3469a0b70ba",
+    "normalized_sha256": "46b1c224ddb8c117a9dbc71d5d36ee59757283713ac1ade3a563018fb827ac1e",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": true
+    }
+  },
+  "jsoup-2718-repaired": {
+    "raw_sha256": "2dd93b447649ecc2b361949a98a64977b7249df465cfb1779c56d3469a0b70ba",
+    "normalized_sha256": "46b1c224ddb8c117a9dbc71d5d36ee59757283713ac1ade3a563018fb827ac1e",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false,
+    "route": {
+      "retained_initial": true
+    }
+  }
+}

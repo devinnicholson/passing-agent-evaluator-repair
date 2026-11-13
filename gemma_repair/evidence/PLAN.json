@@ -1,0 +1,301 @@
+{
+  "units": {
+    "jsoup": {
+      "instance": "jsoup__001752f1",
+      "metadata": {
+        "instance_id": "jsoup__001752f1",
+        "project": "jsoup",
+        "repo": "jhy/jsoup",
+        "v_minus_1_commit": "61923e0455c46cc6320188b13c613302f01e7880",
+        "v0_commit": "001752f1a0b73ae17668dc9fd4c5942424a6c1e2",
+        "v0_date": "2025-03-10 00:00:00",
+        "v0_message": "Invalid XML characters should be dropped, not encoded\n\nFixes #1743",
+        "labels": [
+          "breaking",
+          "missing"
+        ],
+        "changed_test_methods": [
+          "ElementTest.invalidCharactersDiscardedInXml"
+        ],
+        "new_test_files": [],
+        "new_test_methods": "{\"ElementTest\": [\"invalidCharactersDiscardedInXml\"]}",
+        "num_changed_files": 4,
+        "src_changed_lines": 10,
+        "test_changed_lines": 18
+      },
+      "target": {
+        "class": "org.jsoup.nodes.EntitiesTest",
+        "name": "controlCharactersAreEscaped",
+        "parameters": [],
+        "count": 1
+      },
+      "controls": [
+        {
+          "class": "org.jsoup.nodes.ElementTest",
+          "name": "invalidCharactersDiscardedInXml",
+          "parameters": [],
+          "count": 1
+        }
+      ],
+      "test_source": "src/test/java/org/jsoup/nodes/EntitiesTest.java",
+      "fault_origin": "historical parent production rollback",
+      "requirement": "XML serialization must discard XML-invalid control characters while HTML retains escaped control characters. Preserve both HTML and XML assertions.",
+      "prompt": "Repair the fixed Java test method below. Return only a JSON object with exactly one string key body, containing Java source inside the existing method braces. Do not change annotations, signatures, parameter providers, imports or other methods. No filesystem, network, process, environment, class loading or system access. Keep meaningful assertions and preserve relevant earlier coverage.\nRequirement\nXML serialization must discard XML-invalid control characters while HTML retains escaped control characters. Preserve both HTML and XML assertions.\nImports\npackage org.jsoup.nodes;\nimport org.jsoup.Jsoup;\nimport org.jsoup.parser.Parser;\nimport org.junit.jupiter.api.Test;\nimport static org.jsoup.nodes.Document.OutputSettings;\nimport static org.jsoup.nodes.Entities.EscapeMode.*;\nimport static org.junit.jupiter.api.Assertions.assertDoesNotThrow;\nimport static org.junit.jupiter.api.Assertions.assertEquals;\nAvailable context\n\nFixed declaration\n@Test public void controlCharactersAreEscaped() {\nCurrent body\n\n        // https://github.com/jhy/jsoup/issues/1556\n        // we escape ascii control characters in both HTML and XML for compatibility. Required in XML and probably\n        // easier to read in HTML\n        String input = \"<a foo=\\\"&#x1b;esc&#x7;bell\\\">Text &#x1b; &#x7;</a>\";\n        Document doc = Jsoup.parse(input);\n        assertEquals(input, doc.body().html());\n\n        Document xml = Jsoup.parse(input, \"\", Parser.xmlParser());\n        assertEquals(input, xml.html());\n    ",
+      "fault_files": [
+        "src/main/java/org/jsoup/nodes/Entities.java"
+      ]
+    },
+    "codec_standard": {
+      "instance": "commons-codec__d594dd25",
+      "metadata": {
+        "instance_id": "commons-codec__d594dd25",
+        "project": "commons-codec",
+        "repo": "apache/commons-codec",
+        "v_minus_1_commit": "c7fbb1778e87f3941c33d2ec3e7c59b6550fafbc",
+        "v0_commit": "d594dd25868063be2ea5a7744123393d66cad479",
+        "v0_date": "2025-12-31 00:00:00",
+        "v0_message": "[CODEC-333] Add separate methods for strict Standard and URL Safe Base64 decoding (#419)\n\n* Add separate methods for strict Standard and URL Safe Base64 decoding\n\n* fixed javadocs + resolved other comments",
+        "labels": [
+          "stale",
+          "missing"
+        ],
+        "changed_test_methods": [
+          "Base64Test.testIsStringBase64",
+          "Base64Test.testIsStringBase64Standard",
+          "Base64Test.testIsStringBase64Url",
+          "Base64Test.testDecodeBase64DiffChars",
+          "Base64Test.testDecodeBase64StandardDiffChars",
+          "Base64Test.testDecodeBase64UrlDiffChars"
+        ],
+        "new_test_files": [],
+        "new_test_methods": "{\"Base64Test\": [\"testDecodeBase64DiffChars\", \"testDecodeBase64StandardDiffChars\", \"testDecodeBase64UrlDiffChars\", \"testIsStringBase64Standard\", \"testIsStringBase64Url\"]}",
+        "num_changed_files": 2,
+        "src_changed_lines": 293,
+        "test_changed_lines": 103
+      },
+      "target": {
+        "class": "org.apache.commons.codec.binary.Base64Test",
+        "name": "testDecodeEncodeStandard",
+        "parameters": [
+          "java.lang.String"
+        ],
+        "count": 9
+      },
+      "controls": [
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testDecodeBase64DiffChars",
+          "parameters": [],
+          "count": 1
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testDecodeBase64StandardDiffChars",
+          "parameters": [],
+          "count": 1
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testDecodeBase64UrlDiffChars",
+          "parameters": [],
+          "count": 1
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testIsStringBase64",
+          "parameters": [],
+          "count": 1
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testIsStringBase64Standard",
+          "parameters": [],
+          "count": 1
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testIsStringBase64Url",
+          "parameters": [],
+          "count": 1
+        }
+      ],
+      "test_source": "src/test/java/org/apache/commons/codec/binary/Base64Test.java",
+      "fault_origin": "authored wrong-alphabet strict String decoder",
+      "requirement": "Write a Standard-alphabet round-trip test for encodedText. Use the newly added decodeBase64Standard(String) API, preserve exact supplied text after standard re-encoding, and assert equality. Fixed provider values include empty input and + and / alphabet cases.",
+      "prompt": "Repair the fixed Java test method below. Return only a JSON object with exactly one string key body, containing Java source inside the existing method braces. Do not change annotations, signatures, parameter providers, imports or other methods. No filesystem, network, process, environment, class loading or system access. Keep meaningful assertions and preserve relevant earlier coverage.\nRequirement\nWrite a Standard-alphabet round-trip test for encodedText. Use the newly added decodeBase64Standard(String) API, preserve exact supplied text after standard re-encoding, and assert equality. Fixed provider values include empty input and + and / alphabet cases.\nImports\npackage org.apache.commons.codec.binary;\nimport static org.junit.jupiter.api.Assertions.assertArrayEquals;\nimport static org.junit.jupiter.api.Assertions.assertEquals;\nimport static org.junit.jupiter.api.Assertions.assertFalse;\nimport static org.junit.jupiter.api.Assertions.assertNull;\nimport static org.junit.jupiter.api.Assertions.assertThrows;\nimport static org.junit.jupiter.api.Assertions.assertTrue;\nimport static org.junit.jupiter.api.Assertions.fail;\nimport java.math.BigInteger;\nimport java.nio.charset.Charset;\nimport java.nio.charset.StandardCharsets;\nimport java.util.Arrays;\nimport java.util.Random;\nimport java.util.stream.Stream;\nimport org.apache.commons.codec.CodecPolicy;\nimport org.apache.commons.codec.DecoderException;\nimport org.apache.commons.codec.EncoderException;\nimport org.apache.commons.lang3.ArrayUtils;\nimport org.junit.jupiter.api.Assumptions;\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.params.ParameterizedTest;\nimport org.junit.jupiter.params.provider.Arguments;\nimport org.junit.jupiter.params.provider.MethodSource;\nimport org.junit.jupiter.params.provider.ValueSource;\nAvailable context\nStringUtils.newStringUsAscii(byte[]), StringUtils.getBytesUtf8(String), Base64.encodeBase64String(byte[]) and Base64.encodeBase64URLSafeString(byte[]) are available.\nFixed declaration\nvoid testDecodeEncodeStandard(final String encodedText) {\nCurrent body\n\n        // TODO implement the new strict-alphabet round-trip test.\n",
+      "fault_files": [
+        "src/main/java/org/apache/commons/codec/binary/Base64.java"
+      ]
+    },
+    "codec_url": {
+      "instance": "commons-codec__d594dd25",
+      "metadata": {
+        "instance_id": "commons-codec__d594dd25",
+        "project": "commons-codec",
+        "repo": "apache/commons-codec",
+        "v_minus_1_commit": "c7fbb1778e87f3941c33d2ec3e7c59b6550fafbc",
+        "v0_commit": "d594dd25868063be2ea5a7744123393d66cad479",
+        "v0_date": "2025-12-31 00:00:00",
+        "v0_message": "[CODEC-333] Add separate methods for strict Standard and URL Safe Base64 decoding (#419)\n\n* Add separate methods for strict Standard and URL Safe Base64 decoding\n\n* fixed javadocs + resolved other comments",
+        "labels": [
+          "stale",
+          "missing"
+        ],
+        "changed_test_methods": [
+          "Base64Test.testIsStringBase64",
+          "Base64Test.testIsStringBase64Standard",
+          "Base64Test.testIsStringBase64Url",
+          "Base64Test.testDecodeBase64DiffChars",
+          "Base64Test.testDecodeBase64StandardDiffChars",
+          "Base64Test.testDecodeBase64UrlDiffChars"
+        ],
+        "new_test_files": [],
+        "new_test_methods": "{\"Base64Test\": [\"testDecodeBase64DiffChars\", \"testDecodeBase64StandardDiffChars\", \"testDecodeBase64UrlDiffChars\", \"testIsStringBase64Standard\", \"testIsStringBase64Url\"]}",
+        "num_changed_files": 2,
+        "src_changed_lines": 293,
+        "test_changed_lines": 103
+      },
+      "target": {
+        "class": "org.apache.commons.codec.binary.Base64Test",
+        "name": "testDecodeEncodeUrl",
+        "parameters": [
+          "java.lang.String"
+        ],
+        "count": 9
+      },
+      "controls": [
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testDecodeBase64DiffChars",
+          "parameters": [],
+          "count": 1
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testDecodeBase64StandardDiffChars",
+          "parameters": [],
+          "count": 1
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testDecodeBase64UrlDiffChars",
+          "parameters": [],
+          "count": 1
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testIsStringBase64",
+          "parameters": [],
+          "count": 1
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testIsStringBase64Standard",
+          "parameters": [],
+          "count": 1
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testIsStringBase64Url",
+          "parameters": [],
+          "count": 1
+        }
+      ],
+      "test_source": "src/test/java/org/apache/commons/codec/binary/Base64Test.java",
+      "fault_origin": "authored wrong-alphabet strict String decoder",
+      "requirement": "Write a URL-safe-alphabet round-trip test for encodedText. Use the newly added decodeBase64Url(String) API, preserve exact supplied text after URL-safe unpadded re-encoding, and assert equality. Fixed provider values include empty input and - and _ alphabet cases.",
+      "prompt": "Repair the fixed Java test method below. Return only a JSON object with exactly one string key body, containing Java source inside the existing method braces. Do not change annotations, signatures, parameter providers, imports or other methods. No filesystem, network, process, environment, class loading or system access. Keep meaningful assertions and preserve relevant earlier coverage.\nRequirement\nWrite a URL-safe-alphabet round-trip test for encodedText. Use the newly added decodeBase64Url(String) API, preserve exact supplied text after URL-safe unpadded re-encoding, and assert equality. Fixed provider values include empty input and - and _ alphabet cases.\nImports\npackage org.apache.commons.codec.binary;\nimport static org.junit.jupiter.api.Assertions.assertArrayEquals;\nimport static org.junit.jupiter.api.Assertions.assertEquals;\nimport static org.junit.jupiter.api.Assertions.assertFalse;\nimport static org.junit.jupiter.api.Assertions.assertNull;\nimport static org.junit.jupiter.api.Assertions.assertThrows;\nimport static org.junit.jupiter.api.Assertions.assertTrue;\nimport static org.junit.jupiter.api.Assertions.fail;\nimport java.math.BigInteger;\nimport java.nio.charset.Charset;\nimport java.nio.charset.StandardCharsets;\nimport java.util.Arrays;\nimport java.util.Random;\nimport java.util.stream.Stream;\nimport org.apache.commons.codec.CodecPolicy;\nimport org.apache.commons.codec.DecoderException;\nimport org.apache.commons.codec.EncoderException;\nimport org.apache.commons.lang3.ArrayUtils;\nimport org.junit.jupiter.api.Assumptions;\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.params.ParameterizedTest;\nimport org.junit.jupiter.params.provider.Arguments;\nimport org.junit.jupiter.params.provider.MethodSource;\nimport org.junit.jupiter.params.provider.ValueSource;\nAvailable context\nStringUtils.newStringUsAscii(byte[]), StringUtils.getBytesUtf8(String), Base64.encodeBase64String(byte[]) and Base64.encodeBase64URLSafeString(byte[]) are available.\nFixed declaration\nvoid testDecodeEncodeUrl(final String encodedText) {\nCurrent body\n\n        // TODO implement the new strict-alphabet round-trip test.\n",
+      "fault_files": [
+        "src/main/java/org/apache/commons/codec/binary/Base64.java"
+      ]
+    },
+    "lang": {
+      "instance": "commons-lang__14d34506",
+      "metadata": {
+        "instance_id": "commons-lang__14d34506",
+        "project": "commons-lang",
+        "repo": "apache/commons-lang",
+        "v_minus_1_commit": "1897e4d7f6cdf129db7a4c8f35f7a3657c712a70",
+        "v0_commit": "14d34506c993dcefa0860e4a98fa30062d851997",
+        "v0_date": "2025-08-30 00:00:00",
+        "v0_message": "MethodUtils cannot find or invoke vararg methods when widening primitive\ntypes following the JLS 5.1.2. Widening Primitive Conversion.",
+        "labels": [
+          "breaking",
+          "stale"
+        ],
+        "changed_test_methods": [
+          "TestMutableSubclass.testInvokeMethod",
+          "TestMutableSubclass.testInvokeStaticMethod"
+        ],
+        "new_test_files": [],
+        "new_test_methods": "{}",
+        "num_changed_files": 5,
+        "src_changed_lines": 122,
+        "test_changed_lines": 22
+      },
+      "target": {
+        "class": "org.apache.commons.lang3.reflect.MethodUtilsTest",
+        "name": "testInvokeMethod",
+        "parameters": [],
+        "count": 1
+      },
+      "controls": [],
+      "test_source": "src/test/java/org/apache/commons/lang3/reflect/MethodUtilsTest.java",
+      "fault_origin": "historical parent production rollback",
+      "requirement": "MethodUtils.invokeMethod now supports primitive widening for varargs. Integer, byte, short and char arguments can select foo(long...). Preserve the existing unrelated checks and replace the obsolete two-integer NoSuchMethodException expectation with meaningful widening assertions.",
+      "prompt": "Repair the fixed Java test method below. Return only a JSON object with exactly one string key body, containing Java source inside the existing method braces. Do not change annotations, signatures, parameter providers, imports or other methods. No filesystem, network, process, environment, class loading or system access. Keep meaningful assertions and preserve relevant earlier coverage.\nRequirement\nMethodUtils.invokeMethod now supports primitive widening for varargs. Integer, byte, short and char arguments can select foo(long...). Preserve the existing unrelated checks and replace the obsolete two-integer NoSuchMethodException expectation with meaningful widening assertions.\nImports\npackage org.apache.commons.lang3.reflect;\nimport static org.apache.commons.lang3.LangAssertions.assertNullPointerException;\nimport static org.junit.jupiter.api.Assertions.assertArrayEquals;\nimport static org.junit.jupiter.api.Assertions.assertEquals;\nimport static org.junit.jupiter.api.Assertions.assertFalse;\nimport static org.junit.jupiter.api.Assertions.assertNotNull;\nimport static org.junit.jupiter.api.Assertions.assertNotSame;\nimport static org.junit.jupiter.api.Assertions.assertNull;\nimport static org.junit.jupiter.api.Assertions.assertSame;\nimport static org.junit.jupiter.api.Assertions.assertThrows;\nimport static org.junit.jupiter.api.Assertions.assertTrue;\nimport java.awt.Color;\nimport java.lang.reflect.Method;\nimport java.lang.reflect.Modifier;\nimport java.lang.reflect.Type;\nimport java.nio.file.Files;\nimport java.nio.file.LinkOption;\nimport java.nio.file.Path;\nimport java.util.Arrays;\nimport java.util.Date;\nimport java.util.HashMap;\nimport java.util.Iterator;\nimport java.util.List;\nimport java.util.Map;\nimport org.apache.commons.lang3.AbstractLangTest;\nimport org.apache.commons.lang3.ArrayUtils;\nimport org.apache.commons.lang3.ClassUtils;\nimport org.apache.commons.lang3.ClassUtils.Interfaces;\nimport org.apache.commons.lang3.math.NumberUtils;\nimport org.apache.commons.lang3.mutable.Mutable;\nimport org.apache.commons.lang3.mutable.MutableObject;\nimport org.apache.commons.lang3.reflect.testbed.Annotated;\nimport org.apache.commons.lang3.reflect.testbed.GenericConsumer;\nimport org.apache.commons.lang3.reflect.testbed.GenericParent;\nimport org.apache.commons.lang3.reflect.testbed.PublicChild;\nimport org.apache.commons.lang3.reflect.testbed.PublicSubBeanOtherPackage;\nimport org.apache.commons.lang3.reflect.testbed.StringParameterizedChild;\nimport org.apache.commons.lang3.tuple.ImmutablePair;\nimport org.junit.jupiter.api.BeforeEach;\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.params.ParameterizedTest;\nimport org.junit.jupiter.params.provider.ValueSource;\nAvailable context\n    interface InterfaceGetMatchingMethod {\n        default void testMethod6() {\n        }\n    }\n    private static final class MethodDescriptor {\n        final Class<?> declaringClass;\n        final String name;\n        final Type[] parameterTypes;\n\n        MethodDescriptor(final Class<?> declaringClass, final String name, final Type... parameterTypes) {\n            this.declaringClass = declaringClass;\n            this.name = name;\n            this.parameterTypes = parameterTypes;\n        }\n    }\n\n    interface PackagePrivateEmptyInterface {\n        // empty\n    }\n\n    public static class ParentObject extends GrandParentObject {\n        // empty\n    }\n\n    private interface PrivateEmptyInterface {\n        // empty\n    }\n\n    public static class PublicImpl1OfPackagePrivateEmptyInterface implements PackagePrivateEmptyInterface {\n        // empty\n    }\n\n    public static class PublicImpl2OfPackagePrivateEmptyInterface implements PackagePrivateEmptyInterface {\n        // empty\n    }\n\n    public static class TestBean {\n\n        public static String bar() {\n            return \"bar()\";\n        }\n\n        public static String bar(final double d) {\n            return \"bar(double)\";\n        }\n\n        public static String bar(final int i) {\n            return \"bar(int)\";\n        }\n\n        public static String bar(final Integer i) {\n            return \"bar(Integer)\";\n        }\n\n        public static String bar(final Integer i, final String... s) {\n            return \"bar(int, String...)\";\n        }\n\n        public static String bar(final long... s) {\n            return \"bar(long...)\";\n        }\n\n        public static String bar(final Object o) {\n            return \"bar(Object)\";\n        }\n\n        public static String bar(final String s) {\n            return \"bar(String)\";\n        }\n\n        public static String bar(final String... s) {\n            return \"bar(String...)\";\n        }\n\n        // This method is overloaded for the wrapper class for every numeric primitive type, plus the common\n        // supertype Number\n        public static String numOverload(final Byte... args) {\n            return \"Byte...\";\n        }\n\n        public static String numOverload(final Double... args) {\n            return \"Double...\";\n        }\n\n        public static String numOverload(final Float... args) {\n            return \"Float...\";\n        }\n\n        public static String numOverload(final Integer... args) {\n            return \"Integer...\";\n        }\n\n        public static String numOverload(final Long... args) {\n            return \"Long...\";\n        }\n\n        public static String numOverload(final Number... args) {\n            return \"Number...\";\n        }\n\n        public static String numOverload(final Short... args) {\n            return \"Short...\";\n        }\n\n        public static void oneParameterStatic(final String s) {\n            // empty\n        }\n\n        public static String staticIntIntVarArg(final int intArg, final int... args) {\n            return \"static int, int...\";\n        }\n\n        public static String staticIntLongVarArg(final int intArg, final long... args) {\n            return \"static int, long...\";\n        }\n\n        public static String staticIntStringVarArg(final int intArg, final String... args) {\n            return \"static int, String...\";\n        }\n\n        public static String staticPackagePrivateEmptyInterface(final PackagePrivateEmptyInterface... args) {\n            return \"static PackagePrivateEmptyInterface...\";\n        }\n\n        public String packagePrivateEmptyInterface(final PackagePrivateEmptyInterface... args) {\n            return \"PackagePrivateEmptyInterface...\";\n        }\n\n        public static String varOverload(final Boolean... args) {\n            return \"Boolean...\";\n        }\n\n        // This method is overloaded for the wrapper class for every primitive type, plus the common supertypes\n        // Number and Object. This is an acid test since it easily leads to ambiguous methods.\n        public static String varOverload(final Byte... args) {\n            return \"Byte...\";\n        }\n\n        public static String varOverload(final Character... args) {\n            return \"Character...\";\nThe fixture field testBean is a TestBean initialized before each test.\nFixed declaration\nvoid testInvokeMethod() throws Exception {\nCurrent body\n\n        assertEquals(\"foo()\", MethodUtils.invokeMethod(testBean, \"foo\", (Object[]) ArrayUtils.EMPTY_CLASS_ARRAY));\n        assertEquals(\"foo()\", MethodUtils.invokeMethod(testBean, \"foo\"));\n        assertEquals(\"foo()\", MethodUtils.invokeMethod(testBean, \"foo\", (Object[]) null));\n        assertEquals(\"foo()\", MethodUtils.invokeMethod(testBean, \"foo\", null, null));\n        assertEquals(\"foo(String)\", MethodUtils.invokeMethod(testBean, \"foo\", \"\"));\n        assertEquals(\"foo(Object)\", MethodUtils.invokeMethod(testBean, \"foo\", new Object()));\n        assertEquals(\"foo(Object)\", MethodUtils.invokeMethod(testBean, \"foo\", Boolean.TRUE));\n        assertEquals(\"foo(Integer)\", MethodUtils.invokeMethod(testBean, \"foo\", NumberUtils.INTEGER_ONE));\n        assertEquals(\"foo(int)\", MethodUtils.invokeMethod(testBean, \"foo\", NumberUtils.BYTE_ONE));\n        assertEquals(\"foo(long)\", MethodUtils.invokeMethod(testBean, \"foo\", NumberUtils.LONG_ONE));\n        assertEquals(\"foo(double)\", MethodUtils.invokeMethod(testBean, \"foo\", NumberUtils.DOUBLE_ONE));\n        assertEquals(\"foo(String...)\", MethodUtils.invokeMethod(testBean, \"foo\", \"a\", \"b\", \"c\"));\n        assertEquals(\"foo(String...)\", MethodUtils.invokeMethod(testBean, \"foo\", \"a\", \"b\", \"c\"));\n        assertEquals(\"foo(int, String...)\", MethodUtils.invokeMethod(testBean, \"foo\", 5, \"a\", \"b\", \"c\"));\n        assertEquals(\"foo(long...)\", MethodUtils.invokeMethod(testBean, \"foo\", 1L, 2L));\n        assertThrows(NoSuchMethodException.class, () -> MethodUtils.invokeMethod(testBean, \"foo\", 1, 2));\n        TestBean.verify(new ImmutablePair<>(\"String...\", new String[] { \"x\", \"y\" }), MethodUtils.invokeMethod(testBean, \"varOverloadEcho\", \"x\", \"y\"));\n        TestBean.verify(new ImmutablePair<>(\"Number...\", new Number[] { 17, 23, 42 }), MethodUtils.invokeMethod(testBean, \"varOverloadEcho\", 17, 23, 42));\n        TestBean.verify(new ImmutablePair<>(\"String...\", new String[] { \"x\", \"y\" }), MethodUtils.invokeMethod(testBean, \"varOverloadEcho\", \"x\", \"y\"));\n        TestBean.verify(new ImmutablePair<>(\"Number...\", new Number[] { 17, 23, 42 }), MethodUtils.invokeMethod(testBean, \"varOverloadEcho\", 17, 23, 42));\n        assertNullPointerException(() -> MethodUtils.invokeMethod(null, \"foo\", 1, 2));\n        assertThrows(NoSuchMethodException.class, () -> MethodUtils.invokeMethod(testBean, null, 1, 2));\n    ",
+      "fault_files": [
+        "src/main/java/org/apache/commons/lang3/ClassUtils.java",
+        "src/main/java/org/apache/commons/lang3/reflect/ConstructorUtils.java",
+        "src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java"
+      ]
+    },
+    "jfreechart": {
+      "instance": "jfreechart__c1a6c135",
+      "metadata": {
+        "instance_id": "jfreechart__c1a6c135",
+        "project": "jfreechart",
+        "repo": "jfree/jfreechart",
+        "v_minus_1_commit": "b42f388da5d4c11f6607596f2e7493cbed5d0e55",
+        "v0_commit": "c1a6c13526273a319319d2dc8979e5b5b2c97531",
+        "v0_date": "2020-11-15 00:00:00",
+        "v0_message": "Add flags for min and max outliers as suggested in #79.",
+        "labels": [
+          "stale"
+        ],
+        "changed_test_methods": [
+          "BoxAndWhiskerRendererTest.testEquals"
+        ],
+        "new_test_files": [],
+        "new_test_methods": "{}",
+        "num_changed_files": 3,
+        "src_changed_lines": 150,
+        "test_changed_lines": 9
+      },
+      "target": {
+        "class": "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest",
+        "name": "testEquals",
+        "parameters": [],
+        "count": 1
+      },
+      "controls": [],
+      "test_source": "src/test/java/org/jfree/chart/renderer/category/BoxAndWhiskerRendererTest.java",
+      "fault_origin": "historical parent equals body with developer API retained",
+      "requirement": "BoxAndWhiskerRenderer adds get/setMinOutlierVisible and get/setMaxOutlierVisible, default true. Equality must distinguish both fields. Extend the existing equality test, preserving earlier checks and checking equality after matching changes to each flag.",
+      "prompt": "Repair the fixed Java test method below. Return only a JSON object with exactly one string key body, containing Java source inside the existing method braces. Do not change annotations, signatures, parameter providers, imports or other methods. No filesystem, network, process, environment, class loading or system access. Keep meaningful assertions and preserve relevant earlier coverage.\nRequirement\nBoxAndWhiskerRenderer adds get/setMinOutlierVisible and get/setMaxOutlierVisible, default true. Equality must distinguish both fields. Extend the existing equality test, preserving earlier checks and checking equality after matching changes to each flag.\nImports\npackage org.jfree.chart.renderer.category;\nimport static org.junit.jupiter.api.Assertions.assertEquals;\nimport static org.junit.jupiter.api.Assertions.assertTrue;\nimport static org.junit.jupiter.api.Assertions.assertFalse;\nimport static org.junit.jupiter.api.Assertions.assertNull;\nimport static org.junit.jupiter.api.Assertions.assertNotNull;\nimport static org.junit.jupiter.api.Assertions.fail;\nimport java.awt.Color;\nimport java.awt.GradientPaint;\nimport java.awt.Graphics2D;\nimport java.awt.geom.Rectangle2D;\nimport java.awt.image.BufferedImage;\nimport java.util.ArrayList;\nimport java.util.List;\nimport org.jfree.chart.ChartRenderingInfo;\nimport org.jfree.chart.JFreeChart;\nimport org.jfree.chart.LegendItem;\nimport org.jfree.chart.TestUtils;\nimport org.jfree.chart.axis.CategoryAxis;\nimport org.jfree.chart.axis.NumberAxis;\nimport org.jfree.chart.plot.CategoryPlot;\nimport org.jfree.chart.plot.PlotOrientation;\nimport org.jfree.chart.util.CloneUtils;\nimport org.jfree.chart.util.PublicCloneable;\nimport org.jfree.data.category.DefaultCategoryDataset;\nimport org.jfree.data.statistics.BoxAndWhiskerItem;\nimport org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset;\nimport org.junit.jupiter.api.Test;\nAvailable context\n\nFixed declaration\npublic void testEquals() {\nCurrent body\n\n        BoxAndWhiskerRenderer r1 = new BoxAndWhiskerRenderer();\n        BoxAndWhiskerRenderer r2 = new BoxAndWhiskerRenderer();\n        assertEquals(r1, r2);\n\n        r1.setArtifactPaint(new GradientPaint(1.0f, 2.0f, Color.YELLOW,\n                3.0f, 4.0f, Color.BLUE));\n        assertFalse(r1.equals(r2));\n        r2.setArtifactPaint(new GradientPaint(1.0f, 2.0f, Color.YELLOW,\n                3.0f, 4.0f, Color.BLUE));\n        assertEquals(r1, r2);\n\n        r1.setFillBox(!r1.getFillBox());\n        assertFalse(r1.equals(r2));\n        r2.setFillBox(!r2.getFillBox());\n        assertEquals(r1, r2);\n\n        r1.setItemMargin(0.11);\n        assertFalse(r1.equals(r2));\n        r2.setItemMargin(0.11);\n        assertEquals(r1, r2);\n\n        r1.setMaximumBarWidth(0.99);\n        assertFalse(r1.equals(r2));\n        r2.setMaximumBarWidth(0.99);\n        assertTrue(r1.equals(r2));\n\n        r1.setMeanVisible(false);\n        assertFalse(r1.equals(r2));\n        r2.setMeanVisible(false);\n        assertTrue(r1.equals(r2));\n\n        r1.setMedianVisible(false);\n        assertFalse(r1.equals(r2));\n        r2.setMedianVisible(false);\n        assertTrue(r1.equals(r2));\n    ",
+      "fault_files": [
+        "src/main/java/org/jfree/chart/renderer/category/BoxAndWhiskerRenderer.java"
+      ]
+    }
+  },
+  "archives": {
+    "tebench_independent_panel_sources.zip": "4e0f7fa43ea5723f32e942d412ac9371eac055a69039577ce625067bfdd3edda",
+    "tebench_panel_environment_package.zip": "2ee8b42c207811cf03a0e329b7c21702698d37d20fd99ddbeeee6c35ca624452"
+  },
+  "protocol_sha256": "44dd2e8ad282daedce4f8774d1daa96bdc413b0f72686239d9dd9342e5681277",
+  "seeds": [
+    1729,
+    2718
+  ],
+  "model_outputs_observed": false
+}

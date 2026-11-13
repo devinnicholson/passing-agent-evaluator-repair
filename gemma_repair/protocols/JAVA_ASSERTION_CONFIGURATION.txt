@@ -1,0 +1,9 @@
+The first Jsoup response inspected after initial grading includes Java language assert statements. The provisional direct-JVM grader did not pass -ea. JUnit assertion methods run regardless, but Java language assertions would otherwise be disabled. This is a harness configuration limitation, not evidence of an incorrect model program. Maven Surefire documents enableAssertions as true by default.
+
+Correct all new Gemma native executions uniformly to pass -ea, including inventory, both graders and the independent fault oracle. Add a fail-closed startup check in the native probe so disabled assertions cannot silently produce a result. Qualify all five gold/stale/vacuous units again and add an independent false-Java-assertion control. Regrade the exact same ten initial slots, preserving all original provisional records and model bytes. No model response is regenerated or hand-corrected.
+
+The eight model callbacks have already received the provisional developer feedback. Compare that feedback byte-for-byte with feedback from the corrected initial runs. Only if it is identical may the callback data be used as the same paired-policy study under the corrected configuration. If feedback differs, retain the original workflow attribution and report corrected fixed-patch regrades as a distinct sensitivity analysis. Never silently claim the model received feedback that it did not receive. All final Gemma body replays must state their assertion configuration.
+
+The older frozen layout-study artifact remains unchanged. Its recorded candidate/reference assertions use JUnit assertion methods. This correction is applied to the new Gemma body study, where generated Java language assertions are possible. Training and GPU inference stay paused. No publishing or submission. Additional bounded native CPU checks remain within the whole $5 reserve.
+
+https://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#enableAssertions

@@ -1,0 +1,602 @@
+{
+  "completed": true,
+  "model": {
+    "model": "google/gemma-4-E4B-it-qat-q4_0-gguf",
+    "revision": "4b4a2c1d584be7264f87aac328a1bc739ce81b6c",
+    "file": "gemma-4-E4B_q4_0-it.gguf",
+    "bytes": 5154941280,
+    "sha256": "676c35070db6dbe52f93e9c864ee0fba4eddea94b9c875d9cb10daff453fbaee",
+    "url": "https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-gguf/resolve/4b4a2c1d584be7264f87aac328a1bc739ce81b6c/gemma-4-E4B_q4_0-it.gguf"
+  },
+  "backend": "Azure CPU only, two threads, E4B prospectively substituted before all new model outputs",
+  "paired_seed_observations": 10,
+  "repair_units": 5,
+  "historical_commit_clusters": 4,
+  "counts": {
+    "initial_status_REJECTED": 7,
+    "initial_model_outputs_available": 9,
+    "initial_responses_missing": 1,
+    "initial_qualified": 1,
+    "initial_nonempty_source_false_pass": 0,
+    "released_qualified": 2,
+    "released_status_REJECTED": 6,
+    "released_outputs_available": 8,
+    "released_observations": 10,
+    "released_accepted_unqualified": 1,
+    "released_accepted_developer_failure": 0,
+    "released_crossgraded_source_false_pass": 0,
+    "repaired_qualified": 2,
+    "repaired_status_REJECTED": 6,
+    "repaired_outputs_available": 8,
+    "repaired_observations": 10,
+    "repaired_accepted_unqualified": 1,
+    "repaired_accepted_developer_failure": 0,
+    "repaired_crossgraded_source_false_pass": 0,
+    "both_qualified": 2,
+    "repaired_only": 0,
+    "released_only": 0,
+    "neither_qualified": 8,
+    "initial_status_COMPILE_ERROR": 1,
+    "released_status_COMPILE_ERROR": 1,
+    "repaired_status_COMPILE_ERROR": 1,
+    "released_status_GRADED": 3,
+    "repaired_status_GRADED": 3,
+    "initial_status_GRADED": 2
+  },
+  "initial_calls": 10,
+  "distinct_repair_calls": 8,
+  "actual_repair_outputs": 6,
+  "activated_initial_grader_feedback_contrasts": 0,
+  "java_language_assertions_enabled": true,
+  "primary_policy_extra_calls": {
+    "released": 8,
+    "repaired": 8
+  },
+  "rows": [
+    {
+      "sample": "jsoup-1729",
+      "unit": "jsoup",
+      "seed": 1729,
+      "commit_cluster": "jsoup__001752f1",
+      "initial_output_status": "available",
+      "initial_grade_status": "REJECTED",
+      "initial_feedback_verdicts": {
+        "released": "REJECTED",
+        "repaired": "REJECTED"
+      },
+      "initial_oracle_qualified": false,
+      "arms": {
+        "released": {
+          "status": "REJECTED",
+          "oracle_qualified": false,
+          "model_output_status": "available",
+          "retained_initial": false,
+          "request": "jsoup-1729-repair-released",
+          "final_own_verdict": "REJECTED",
+          "native": {},
+          "oracle": {}
+        },
+        "repaired": {
+          "status": "REJECTED",
+          "oracle_qualified": false,
+          "model_output_status": "available",
+          "retained_initial": false,
+          "request": "jsoup-1729-repair-released",
+          "final_own_verdict": "REJECTED",
+          "native": {},
+          "oracle": {}
+        }
+      }
+    },
+    {
+      "sample": "codec_standard-1729",
+      "unit": "codec_standard",
+      "seed": 1729,
+      "commit_cluster": "commons-codec__d594dd25",
+      "initial_output_status": "available",
+      "initial_grade_status": "COMPILE_ERROR",
+      "initial_feedback_verdicts": {
+        "released": "COMPILE_ERROR",
+        "repaired": "COMPILE_ERROR"
+      },
+      "initial_oracle_qualified": false,
+      "arms": {
+        "released": {
+          "status": "REJECTED",
+          "oracle_qualified": false,
+          "model_output_status": "available",
+          "retained_initial": false,
+          "request": "codec_standard-1729-repair-released",
+          "final_own_verdict": "REJECTED",
+          "native": {},
+          "oracle": {}
+        },
+        "repaired": {
+          "status": "REJECTED",
+          "oracle_qualified": false,
+          "model_output_status": "available",
+          "retained_initial": false,
+          "request": "codec_standard-1729-repair-released",
+          "final_own_verdict": "REJECTED",
+          "native": {},
+          "oracle": {}
+        }
+      }
+    },
+    {
+      "sample": "codec_url-1729",
+      "unit": "codec_url",
+      "seed": 1729,
+      "commit_cluster": "commons-codec__d594dd25",
+      "initial_output_status": "available",
+      "initial_grade_status": "REJECTED",
+      "initial_feedback_verdicts": {
+        "released": "REJECTED",
+        "repaired": "REJECTED"
+      },
+      "initial_oracle_qualified": false,
+      "arms": {
+        "released": {
+          "status": "COMPILE_ERROR",
+          "oracle_qualified": false,
+          "model_output_status": "available",
+          "retained_initial": false,
+          "request": "codec_url-1729-repair-released",
+          "final_own_verdict": "COMPILE_ERROR",
+          "native": {},
+          "oracle": {}
+        },
+        "repaired": {
+          "status": "COMPILE_ERROR",
+          "oracle_qualified": false,
+          "model_output_status": "available",
+          "retained_initial": false,
+          "request": "codec_url-1729-repair-released",
+          "final_own_verdict": "COMPILE_ERROR",
+          "native": {},
+          "oracle": {}
+        }
+      }
+    },
+    {
+      "sample": "lang-1729",
+      "unit": "lang",
+      "seed": 1729,
+      "commit_cluster": "commons-lang__14d34506",
+      "initial_output_status": "available",
+      "initial_grade_status": "REJECTED",
+      "initial_feedback_verdicts": {
+        "released": "REJECTED",
+        "repaired": "REJECTED"
+      },
+      "initial_oracle_qualified": false,
+      "arms": {
+        "released": {
+          "status": "REJECTED",
+          "oracle_qualified": false,
+          "model_output_status": "timeout_no_response",
+          "retained_initial": false,
+          "request": "lang-1729-repair-released",
+          "final_own_verdict": "REJECTED",
+          "native": {},
+          "oracle": {}
+        },
+        "repaired": {
+          "status": "REJECTED",
+          "oracle_qualified": false,
+          "model_output_status": "timeout_no_response",
+          "retained_initial": false,
+          "request": "lang-1729-repair-released",
+          "final_own_verdict": "REJECTED",
+          "native": {},
+          "oracle": {}
+        }
+      }
+    },
+    {
+      "sample": "jfreechart-1729",
+      "unit": "jfreechart",
+      "seed": 1729,
+      "commit_cluster": "jfreechart__c1a6c135",
+      "initial_output_status": "available",
+      "initial_grade_status": "REJECTED",
+      "initial_feedback_verdicts": {
+        "released": "REJECTED",
+        "repaired": "REJECTED"
+      },
+      "initial_oracle_qualified": false,
+      "arms": {
+        "released": {
+          "status": "GRADED",
+          "oracle_qualified": true,
+          "model_output_status": "available",
+          "retained_initial": false,
+          "request": "jfreechart-1729-repair-released",
+          "final_own_verdict": "PASS",
+          "native": {
+            "selected": [
+              "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest#testEquals()"
+            ],
+            "started": 1,
+            "failed": 0,
+            "native_exit": 0,
+            "contract": {
+              "verdict": "PASS",
+              "reasons": [],
+              "expected_invocations": {
+                "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest#testEquals()": 1
+              },
+              "observed_invocations": {
+                "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest#testEquals()": 1
+              },
+              "passed": 1,
+              "failed": 0
+            }
+          },
+          "oracle": {
+            "developer": {
+              "verdict": "PASS",
+              "started": 1,
+              "failed": 0
+            },
+            "fault": {
+              "verdict": "FAIL",
+              "started": 1,
+              "failed": 1
+            }
+          }
+        },
+        "repaired": {
+          "status": "GRADED",
+          "oracle_qualified": true,
+          "model_output_status": "available",
+          "retained_initial": false,
+          "request": "jfreechart-1729-repair-released",
+          "final_own_verdict": "PASS",
+          "native": {
+            "selected": [
+              "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest#testEquals()"
+            ],
+            "started": 1,
+            "failed": 0,
+            "native_exit": 0,
+            "contract": {
+              "verdict": "PASS",
+              "reasons": [],
+              "expected_invocations": {
+                "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest#testEquals()": 1
+              },
+              "observed_invocations": {
+                "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest#testEquals()": 1
+              },
+              "passed": 1,
+              "failed": 0
+            }
+          },
+          "oracle": {
+            "developer": {
+              "verdict": "PASS",
+              "started": 1,
+              "failed": 0
+            },
+            "fault": {
+              "verdict": "FAIL",
+              "started": 1,
+              "failed": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "sample": "jfreechart-2718",
+      "unit": "jfreechart",
+      "seed": 2718,
+      "commit_cluster": "jfreechart__c1a6c135",
+      "initial_output_status": "available",
+      "initial_grade_status": "GRADED",
+      "initial_feedback_verdicts": {
+        "released": "PASS",
+        "repaired": "PASS"
+      },
+      "initial_oracle_qualified": true,
+      "arms": {
+        "released": {
+          "status": "GRADED",
+          "oracle_qualified": true,
+          "model_output_status": "available",
+          "retained_initial": true,
+          "request": null,
+          "final_own_verdict": "PASS",
+          "native": {
+            "selected": [
+              "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest#testEquals()"
+            ],
+            "started": 1,
+            "failed": 0,
+            "native_exit": 0,
+            "contract": {
+              "verdict": "PASS",
+              "reasons": [],
+              "expected_invocations": {
+                "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest#testEquals()": 1
+              },
+              "observed_invocations": {
+                "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest#testEquals()": 1
+              },
+              "passed": 1,
+              "failed": 0
+            }
+          },
+          "oracle": {
+            "developer": {
+              "verdict": "PASS",
+              "started": 1,
+              "failed": 0
+            },
+            "fault": {
+              "verdict": "FAIL",
+              "started": 1,
+              "failed": 1
+            }
+          }
+        },
+        "repaired": {
+          "status": "GRADED",
+          "oracle_qualified": true,
+          "model_output_status": "available",
+          "retained_initial": true,
+          "request": null,
+          "final_own_verdict": "PASS",
+          "native": {
+            "selected": [
+              "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest#testEquals()"
+            ],
+            "started": 1,
+            "failed": 0,
+            "native_exit": 0,
+            "contract": {
+              "verdict": "PASS",
+              "reasons": [],
+              "expected_invocations": {
+                "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest#testEquals()": 1
+              },
+              "observed_invocations": {
+                "org.jfree.chart.renderer.category.BoxAndWhiskerRendererTest#testEquals()": 1
+              },
+              "passed": 1,
+              "failed": 0
+            }
+          },
+          "oracle": {
+            "developer": {
+              "verdict": "PASS",
+              "started": 1,
+              "failed": 0
+            },
+            "fault": {
+              "verdict": "FAIL",
+              "started": 1,
+              "failed": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "sample": "lang-2718",
+      "unit": "lang",
+      "seed": 2718,
+      "commit_cluster": "commons-lang__14d34506",
+      "initial_output_status": "timeout_no_response",
+      "initial_grade_status": "REJECTED",
+      "initial_feedback_verdicts": {
+        "released": "REJECTED",
+        "repaired": "REJECTED"
+      },
+      "initial_oracle_qualified": false,
+      "arms": {
+        "released": {
+          "status": "REJECTED",
+          "oracle_qualified": false,
+          "model_output_status": "timeout_no_response",
+          "retained_initial": false,
+          "request": "lang-2718-repair-released",
+          "final_own_verdict": "REJECTED",
+          "native": {},
+          "oracle": {}
+        },
+        "repaired": {
+          "status": "REJECTED",
+          "oracle_qualified": false,
+          "model_output_status": "timeout_no_response",
+          "retained_initial": false,
+          "request": "lang-2718-repair-released",
+          "final_own_verdict": "REJECTED",
+          "native": {},
+          "oracle": {}
+        }
+      }
+    },
+    {
+      "sample": "codec_url-2718",
+      "unit": "codec_url",
+      "seed": 2718,
+      "commit_cluster": "commons-codec__d594dd25",
+      "initial_output_status": "available",
+      "initial_grade_status": "REJECTED",
+      "initial_feedback_verdicts": {
+        "released": "REJECTED",
+        "repaired": "REJECTED"
+      },
+      "initial_oracle_qualified": false,
+      "arms": {
+        "released": {
+          "status": "REJECTED",
+          "oracle_qualified": false,
+          "model_output_status": "available",
+          "retained_initial": false,
+          "request": "codec_url-2718-repair-released",
+          "final_own_verdict": "REJECTED",
+          "native": {},
+          "oracle": {}
+        },
+        "repaired": {
+          "status": "REJECTED",
+          "oracle_qualified": false,
+          "model_output_status": "available",
+          "retained_initial": false,
+          "request": "codec_url-2718-repair-released",
+          "final_own_verdict": "REJECTED",
+          "native": {},
+          "oracle": {}
+        }
+      }
+    },
+    {
+      "sample": "codec_standard-2718",
+      "unit": "codec_standard",
+      "seed": 2718,
+      "commit_cluster": "commons-codec__d594dd25",
+      "initial_output_status": "available",
+      "initial_grade_status": "REJECTED",
+      "initial_feedback_verdicts": {
+        "released": "REJECTED",
+        "repaired": "REJECTED"
+      },
+      "initial_oracle_qualified": false,
+      "arms": {
+        "released": {
+          "status": "REJECTED",
+          "oracle_qualified": false,
+          "model_output_status": "available",
+          "retained_initial": false,
+          "request": "codec_standard-2718-repair-released",
+          "final_own_verdict": "REJECTED",
+          "native": {},
+          "oracle": {}
+        },
+        "repaired": {
+          "status": "REJECTED",
+          "oracle_qualified": false,
+          "model_output_status": "available",
+          "retained_initial": false,
+          "request": "codec_standard-2718-repair-released",
+          "final_own_verdict": "REJECTED",
+          "native": {},
+          "oracle": {}
+        }
+      }
+    },
+    {
+      "sample": "jsoup-2718",
+      "unit": "jsoup",
+      "seed": 2718,
+      "commit_cluster": "jsoup__001752f1",
+      "initial_output_status": "available",
+      "initial_grade_status": "GRADED",
+      "initial_feedback_verdicts": {
+        "released": "PASS",
+        "repaired": "PASS"
+      },
+      "initial_oracle_qualified": false,
+      "arms": {
+        "released": {
+          "status": "GRADED",
+          "oracle_qualified": false,
+          "model_output_status": "available",
+          "retained_initial": true,
+          "request": null,
+          "final_own_verdict": "PASS",
+          "native": {
+            "selected": [
+              "org.jsoup.nodes.ElementTest#invalidCharactersDiscardedInXml()"
+            ],
+            "started": 1,
+            "failed": 0,
+            "native_exit": 0,
+            "contract": {
+              "verdict": "INCOMPLETE",
+              "reasons": [
+                "invocation_count:org.jsoup.nodes.EntitiesTest#controlCharactersAreEscaped()"
+              ],
+              "expected_invocations": {
+                "org.jsoup.nodes.EntitiesTest#controlCharactersAreEscaped()": 1,
+                "org.jsoup.nodes.ElementTest#invalidCharactersDiscardedInXml()": 1
+              },
+              "observed_invocations": {
+                "org.jsoup.nodes.ElementTest#invalidCharactersDiscardedInXml()": 1
+              },
+              "passed": 1,
+              "failed": 0
+            }
+          },
+          "oracle": {
+            "developer": {
+              "verdict": "PASS",
+              "started": 1,
+              "failed": 0
+            },
+            "fault": {
+              "verdict": "PASS",
+              "started": 1,
+              "failed": 0
+            }
+          }
+        },
+        "repaired": {
+          "status": "GRADED",
+          "oracle_qualified": false,
+          "model_output_status": "available",
+          "retained_initial": true,
+          "request": null,
+          "final_own_verdict": "PASS",
+          "native": {
+            "selected": [
+              "org.jsoup.nodes.ElementTest#invalidCharactersDiscardedInXml()",
+              "org.jsoup.nodes.EntitiesTest#controlCharactersAreEscaped()"
+            ],
+            "started": 2,
+            "failed": 0,
+            "native_exit": 0,
+            "contract": {
+              "verdict": "PASS",
+              "reasons": [],
+              "expected_invocations": {
+                "org.jsoup.nodes.EntitiesTest#controlCharactersAreEscaped()": 1,
+                "org.jsoup.nodes.ElementTest#invalidCharactersDiscardedInXml()": 1
+              },
+              "observed_invocations": {
+                "org.jsoup.nodes.ElementTest#invalidCharactersDiscardedInXml()": 1,
+                "org.jsoup.nodes.EntitiesTest#controlCharactersAreEscaped()": 1
+              },
+              "passed": 2,
+              "failed": 0
+            }
+          },
+          "oracle": {
+            "developer": {
+              "verdict": "PASS",
+              "started": 1,
+              "failed": 0
+            },
+            "fault": {
+              "verdict": "PASS",
+              "started": 1,
+              "failed": 0
+            }
+          }
+        }
+      }
+    }
+  ],
+  "limits": [
+    "All historical tasks were source-exposed. Public-source memorization is not excluded.",
+    "Two Codec units share a commit. Seeds, layouts, invocations and methods are not independent tasks.",
+    "Qualification is a finite one-fault test-adequacy oracle, not exhaustive semantic correctness.",
+    "Missing model responses are explicit availability failures. They are not fabricated patches or demonstrated semantic code errors.",
+    "Primary policy changes feedback and stopping jointly. Matched ablation is conditional on initial developer-grader discordance.",
+    "The conservative admission policy rejects Java Unicode escapes and method-scaffold escapes. Admission failure does not establish semantically incorrect Java.",
+    "No post-training, swarm improvement, population accuracy, significance, leaderboard rank or competition-winning effect is established."
+  ]
+}

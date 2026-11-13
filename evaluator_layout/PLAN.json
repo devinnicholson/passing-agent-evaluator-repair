@@ -1,0 +1,147 @@
+{
+  "question": "Can a compiled annotation inventory and explicit finite invocation-count contract preserve required-test execution across source layouts?",
+  "layouts": [
+    "original",
+    "canonical",
+    "inline",
+    "multiline",
+    "qualified",
+    "block_comment",
+    "gap20"
+  ],
+  "strategies": [
+    "released",
+    "same_line_patch",
+    "compiled_inventory"
+  ],
+  "cases": {
+    "jsoup": {
+      "instance_id": "jsoup__001752f1",
+      "repo": "jhy/jsoup",
+      "developer_commit": "001752f1a0b73ae17668dc9fd4c5942424a6c1e2",
+      "stage": "development, source-exposed",
+      "methods": [
+        {
+          "class": "org.jsoup.nodes.EntitiesTest",
+          "name": "controlCharactersAreEscaped",
+          "parameters": [],
+          "expected_invocations": 1,
+          "values": null
+        },
+        {
+          "class": "org.jsoup.nodes.ElementTest",
+          "name": "invalidCharactersDiscardedInXml",
+          "parameters": [],
+          "expected_invocations": 1,
+          "values": null
+        }
+      ],
+      "candidate_file": "EntitiesTest.java",
+      "expected_gold_failures": 0,
+      "expected_candidate_failures": 1
+    },
+    "codec": {
+      "instance_id": "commons-codec__d594dd25",
+      "repo": "apache/commons-codec",
+      "developer_commit": "d594dd25868063be2ea5a7744123393d66cad479",
+      "stage": "frozen source-exposed transfer, not unseen validation",
+      "methods": [
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testDecodeBase64DiffChars",
+          "parameters": [],
+          "expected_invocations": 1,
+          "values": null
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testDecodeBase64StandardDiffChars",
+          "parameters": [],
+          "expected_invocations": 1,
+          "values": null
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testDecodeBase64UrlDiffChars",
+          "parameters": [],
+          "expected_invocations": 1,
+          "values": null
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testIsStringBase64",
+          "parameters": [],
+          "expected_invocations": 1,
+          "values": null
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testIsStringBase64Standard",
+          "parameters": [],
+          "expected_invocations": 1,
+          "values": null
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testIsStringBase64Url",
+          "parameters": [],
+          "expected_invocations": 1,
+          "values": null
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testDecodeEncodeStandard",
+          "parameters": [
+            "java.lang.String"
+          ],
+          "expected_invocations": 9,
+          "values": [
+            "",
+            "Zg==",
+            "Zm8=",
+            "Zm9v",
+            "Zm9vYg==",
+            "Zm9vYmE=",
+            "Zm9vYmFy",
+            "Zm9vYmF+",
+            "Zm9vYmF/"
+          ]
+        },
+        {
+          "class": "org.apache.commons.codec.binary.Base64Test",
+          "name": "testDecodeEncodeUrl",
+          "parameters": [
+            "java.lang.String"
+          ],
+          "expected_invocations": 9,
+          "values": [
+            "",
+            "Zg",
+            "Zm8",
+            "Zm9v",
+            "Zm9vYg",
+            "Zm9vYmE",
+            "Zm9vYmFy",
+            "Zm9vYmF-",
+            "Zm9vYmF_"
+          ]
+        }
+      ],
+      "candidate_file": "Base64Test.java",
+      "expected_gold_failures": 0,
+      "expected_candidate_failures": 6
+    }
+  },
+  "qualification": "Compile original and each layout with javac --release 8 -g:none. Require byte-for-byte equal emitted test classfile maps within each candidate role before admitting a layout. Production fixed. Classfiles carry no debug tables in this new study. This does not retroactively alter earlier experiments.",
+  "candidate_origin": "Both incorrect candidates are authored. No saved agent output is manufactured.",
+  "counts": "Finite fixture invocation counts are independently frozen. General dynamic providers with unknown counts cannot receive a complete contract verdict.",
+  "negative_controls": "Unchanged developer candidates must pass after complete execution; unannotated helper methods must not enter the compiled test inventory.",
+  "transfer": "Implementation and layouts frozen before execution. Codec is already source-exposed; this is not a blind held-out case.",
+  "scope": "Matched changed-method inventory is externally fixed, not end-to-end diff extraction or full benchmark regrade. Native JUnit Jupiter only.",
+  "execution_bound": "Two sequential one-CPU one-GiB Azure jobs, at most one evidenced operational retry per case. Each child has a 275-second cap and 438-second cleanup deadline. Stop rather than adapt scientific hypotheses to outcomes.",
+  "reserve_per_attempt_usd": "0.020",
+  "training": "paused",
+  "gpu_inference": "paused",
+  "submission": "prohibited",
+  "source_packaging": "Complete retained Java sources and pom files. Unrelated test resource fixtures omitted, including upstream local TLS test keys. Selected tests do not consume these resources."
+}

@@ -1,0 +1,42 @@
+{
+  "kit/cases/jsoup/LICENSE": {
+    "url": "https://raw.githubusercontent.com/jhy/jsoup/001752f1a0b73ae17668dc9fd4c5942424a6c1e2/LICENSE",
+    "bytes": 1102,
+    "sha256": "12f89090b34132ac86980044fba5f6d45cfbc02c1eb08e0b53a22b7cb40be446"
+  },
+  "kit/cases/codec_standard/LICENSE.txt": {
+    "url": "https://raw.githubusercontent.com/apache/commons-codec/d594dd25868063be2ea5a7744123393d66cad479/LICENSE.txt",
+    "bytes": 11359,
+    "sha256": "b1d2870f1a00e4d7f56576e5f0870cba109e041f8af66866cf5b499478e654e7"
+  },
+  "kit/cases/codec_standard/NOTICE.txt": {
+    "url": "https://raw.githubusercontent.com/apache/commons-codec/d594dd25868063be2ea5a7744123393d66cad479/NOTICE.txt",
+    "bytes": 175,
+    "sha256": "d82503df1b65173afe535a2f753d27c25377f7f6e9d0b19b4665af617df14750"
+  },
+  "kit/cases/codec_url/LICENSE.txt": {
+    "url": "https://raw.githubusercontent.com/apache/commons-codec/d594dd25868063be2ea5a7744123393d66cad479/LICENSE.txt",
+    "bytes": 11359,
+    "sha256": "b1d2870f1a00e4d7f56576e5f0870cba109e041f8af66866cf5b499478e654e7"
+  },
+  "kit/cases/codec_url/NOTICE.txt": {
+    "url": "https://raw.githubusercontent.com/apache/commons-codec/d594dd25868063be2ea5a7744123393d66cad479/NOTICE.txt",
+    "bytes": 175,
+    "sha256": "d82503df1b65173afe535a2f753d27c25377f7f6e9d0b19b4665af617df14750"
+  },
+  "kit/cases/lang/LICENSE.txt": {
+    "url": "https://raw.githubusercontent.com/apache/commons-lang/14d34506c993dcefa0860e4a98fa30062d851997/LICENSE.txt",
+    "bytes": 11359,
+    "sha256": "b1d2870f1a00e4d7f56576e5f0870cba109e041f8af66866cf5b499478e654e7"
+  },
+  "kit/cases/lang/NOTICE.txt": {
+    "url": "https://raw.githubusercontent.com/apache/commons-lang/14d34506c993dcefa0860e4a98fa30062d851997/NOTICE.txt",
+    "bytes": 174,
+    "sha256": "64bc8696af3f6c770521412b85d3a733fa44b2ef5b0f4bd739e0c4d02eca492a"
+  },
+  "kit/cases/jfreechart/licence-LGPL.txt": {
+    "url": "https://raw.githubusercontent.com/jfree/jfreechart/c1a6c13526273a319319d2dc8979e5b5b2c97531/licence-LGPL.txt",
+    "bytes": 26430,
+    "sha256": "a190dc9c8043755d90f8b0a75fa66b9e42d4af4c980bf5ddc633f0124db3cee7"
+  }
+}

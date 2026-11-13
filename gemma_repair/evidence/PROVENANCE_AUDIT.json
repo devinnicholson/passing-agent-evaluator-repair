@@ -1,0 +1,55 @@
+{
+  "verified": true,
+  "initial_slots": 10,
+  "origins": {
+    "jsoup-1729": {
+      "phase": "parent_collection",
+      "available": true
+    },
+    "codec_standard-1729": {
+      "phase": "parent_collection",
+      "available": true
+    },
+    "codec_url-1729": {
+      "phase": "parent_collection",
+      "available": true
+    },
+    "lang-1729": {
+      "phase": "parent_collection",
+      "available": true
+    },
+    "jfreechart-1729": {
+      "phase": "parent_collection",
+      "available": true
+    },
+    "jfreechart-2718": {
+      "phase": "parent_collection",
+      "available": true
+    },
+    "lang-2718": {
+      "phase": "parent_collection",
+      "available": false,
+      "status": "timeout_no_response"
+    },
+    "codec_url-2718": {
+      "phase": "resumed_collection",
+      "available": true
+    },
+    "codec_standard-2718": {
+      "phase": "resumed_collection",
+      "available": true
+    },
+    "jsoup-2718": {
+      "phase": "resumed_collection",
+      "available": true
+    }
+  },
+  "retained_actual_responses": 6,
+  "parent_error": "TimeoutError timed out",
+  "resumed_initial_requests": 3,
+  "assertion_enabled_feedback_exactly_matches_delivered": true,
+  "verified_distinct_callback_requests": 8,
+  "final_raw_prompts_routing_and_normalization_verified": true,
+  "matched_control_eligible_slots": 0,
+  "no_raw_response_regeneration_or_researcher_code_correction": true
+}

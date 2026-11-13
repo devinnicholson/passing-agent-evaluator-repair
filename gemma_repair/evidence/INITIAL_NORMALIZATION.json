@@ -1,0 +1,102 @@
+{
+  "jsoup-1729": {
+    "raw_sha256": "2a7d734fd1b8a2c77174bf09a21724673fd6146ccb54080dbd0a507432ae2aa7",
+    "normalized_sha256": "309d61ddc38bc185f41d03659ba8099e06da25bc214dfd2a10c8af5dcedbab5b",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false
+  },
+  "codec_standard-1729": {
+    "raw_sha256": "311e1300347981212cdbc04748fc5198b525a9f4a5dafe611aa1fcb7a1c45874",
+    "normalized_sha256": "7e637f861c28bfd51a8a6dc5c0fd52648493f30ba15eb683037428bd93313a5e",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false
+  },
+  "codec_url-1729": {
+    "raw_sha256": "5dba03583d91bbb106ad1281b95676b621e1a961a0d84f8effea6b96730177b3",
+    "normalized_sha256": "15cf93eea6e9ad272a5f8e18549dd0797dc49035e06adeafbcd57adf246d46c0",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false
+  },
+  "lang-1729": {
+    "raw_sha256": "215c27f3db50350d8c424d8cd6e54376953451b839e87d32c54a05257731daaf",
+    "normalized_sha256": "c130ed7dfe88cbb5c7d0e9e0326f23602e987624fe0fde90f5bb0af6d295f4e4",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false
+  },
+  "jfreechart-1729": {
+    "raw_sha256": "5ca8ea560cd0378e97e34a7e2a6d556968f75292a0be5845b62f5f6213d7673e",
+    "normalized_sha256": "e85ec3b7a4c3c3bfb371e68c36cf6c8a99bf876cedcfa2be23066dd3bb9ace86",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false
+  },
+  "jfreechart-2718": {
+    "raw_sha256": "1ffe2835841d585830a863ec9646c3e00bbf269b05595d8c4e0feb0930cb398d",
+    "normalized_sha256": "85418fd630ecbfdfbeae1d1aa78b146df55df3ab40dd5d9ba43eb5e8412302eb",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false
+  },
+  "lang-2718": {
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "one_terminal_turn_marker_removed": false,
+    "semantic_edits": false,
+    "model_output_status": "timeout_no_response",
+    "missing_reason": "TimeoutError timed out",
+    "stop_type": "no_response_timeout",
+    "truncated": null
+  },
+  "codec_url-2718": {
+    "raw_sha256": "8abde9830ad52d867c2cbf5778287c42a461e8f755b5496d7fc8d135ac00a512",
+    "normalized_sha256": "a6f86ed428b4825f8ddf5d6d3a4b8e513452540b7d97c93eeb85d1d526feb21b",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false
+  },
+  "codec_standard-2718": {
+    "raw_sha256": "eff9900eee86da67d392292bfcca4acf4dc136a422e44d1fdcb3b86b8e4d13e3",
+    "normalized_sha256": "631dd9ee24d97f9ffa8da20b3bfa136f7fe89aaf28ec65e3cbee53f5aa6f8c22",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false
+  },
+  "jsoup-2718": {
+    "raw_sha256": "2dd93b447649ecc2b361949a98a64977b7249df465cfb1779c56d3469a0b70ba",
+    "normalized_sha256": "46b1c224ddb8c117a9dbc71d5d36ee59757283713ac1ade3a563018fb827ac1e",
+    "one_terminal_turn_marker_removed": true,
+    "semantic_edits": false,
+    "model_output_status": "available",
+    "missing_reason": null,
+    "stop_type": "eos",
+    "truncated": false
+  }
+}

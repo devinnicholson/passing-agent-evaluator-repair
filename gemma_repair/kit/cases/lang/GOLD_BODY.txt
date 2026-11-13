@@ -1,0 +1,27 @@
+
+        assertEquals("foo()", MethodUtils.invokeMethod(testBean, "foo", (Object[]) ArrayUtils.EMPTY_CLASS_ARRAY));
+        assertEquals("foo()", MethodUtils.invokeMethod(testBean, "foo"));
+        assertEquals("foo()", MethodUtils.invokeMethod(testBean, "foo", (Object[]) null));
+        assertEquals("foo()", MethodUtils.invokeMethod(testBean, "foo", null, null));
+        assertEquals("foo(String)", MethodUtils.invokeMethod(testBean, "foo", ""));
+        assertEquals("foo(Object)", MethodUtils.invokeMethod(testBean, "foo", new Object()));
+        assertEquals("foo(Object)", MethodUtils.invokeMethod(testBean, "foo", Boolean.TRUE));
+        assertEquals("foo(Integer)", MethodUtils.invokeMethod(testBean, "foo", NumberUtils.INTEGER_ONE));
+        assertEquals("foo(int)", MethodUtils.invokeMethod(testBean, "foo", NumberUtils.BYTE_ONE));
+        assertEquals("foo(long)", MethodUtils.invokeMethod(testBean, "foo", NumberUtils.LONG_ONE));
+        assertEquals("foo(double)", MethodUtils.invokeMethod(testBean, "foo", NumberUtils.DOUBLE_ONE));
+        assertEquals("foo(String...)", MethodUtils.invokeMethod(testBean, "foo", "a", "b", "c"));
+        assertEquals("foo(String...)", MethodUtils.invokeMethod(testBean, "foo", "a", "b", "c"));
+        assertEquals("foo(int, String...)", MethodUtils.invokeMethod(testBean, "foo", 5, "a", "b", "c"));
+        assertEquals("foo(long...)", MethodUtils.invokeMethod(testBean, "foo", 1L, 2L));
+        assertEquals("foo(long...)", MethodUtils.invokeMethod(testBean, "foo", 1, 2));
+        assertEquals("foo(long...)", MethodUtils.invokeMethod(testBean, "foo", (byte) 1, (byte) 2)); // widen
+        assertEquals("foo(long...)", MethodUtils.invokeMethod(testBean, "foo", (short) 1, (short) 2)); // widen
+        assertEquals("foo(long...)", MethodUtils.invokeMethod(testBean, "foo", (char) 1, (char) 2)); // widen
+        TestBean.verify(new ImmutablePair<>("String...", new String[] { "x", "y" }), MethodUtils.invokeMethod(testBean, "varOverloadEcho", "x", "y"));
+        TestBean.verify(new ImmutablePair<>("Number...", new Number[] { 17, 23, 42 }), MethodUtils.invokeMethod(testBean, "varOverloadEcho", 17, 23, 42));
+        TestBean.verify(new ImmutablePair<>("String...", new String[] { "x", "y" }), MethodUtils.invokeMethod(testBean, "varOverloadEcho", "x", "y"));
+        TestBean.verify(new ImmutablePair<>("Number...", new Number[] { 17, 23, 42 }), MethodUtils.invokeMethod(testBean, "varOverloadEcho", 17, 23, 42));
+        assertNullPointerException(() -> MethodUtils.invokeMethod(null, "foo", 1, 2));
+        assertThrows(NoSuchMethodException.class, () -> MethodUtils.invokeMethod(testBean, null, 1, 2));
+    

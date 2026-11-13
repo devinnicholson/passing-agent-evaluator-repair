@@ -1,0 +1,12 @@
+All six GCP requests failed before allocating a VM or producing any output. Exact owned GPU VM and disk absence was confirmed. No additional GCP request is permitted in this phase.
+
+Prospective CPU inference substitution
+Run the already qualified five-unit paired study on the official Google Gemma 4 E4B instruction-tuned Q4_0 GGUF. This is a different model from the earlier 31B identification study. Never pool their outcomes, pretend to have collected 31B repair outputs, or treat the model substitution as an empirical result. The E4B choice is due to hardware availability before observing any new task completion.
+
+Model google/gemma-4-E4B-it-qat-q4_0-gguf, revision 4b4a2c1d584be7264f87aac328a1bc739ce81b6c, file gemma-4-E4B_q4_0-it.gguf, 5154941280 bytes, SHA256 676c35070db6dbe52f93e9c864ee0fba4eddea94b9c875d9cb10daff453fbaee. llama.cpp remains b11552, using the official Linux x64 CPU archive, 17824766 bytes, SHA256 a45a6afda05d08028bd37998072ab602c96799bccde126835941623cb99bb727.
+
+Keep the identical qualified task plan, source, requirements, fixed scaffolds, faults, two seeds, 8192 context, 2048 generated-token limit, temperature, top-k/top-p, strict decoding, pairing, one repair opportunity, held-out oracle and null-result rules. Use two CPU inference threads, no GPU layers, and at most 600 seconds per completion to accommodate CPU speed. This is an inference-backend change, not training. Preserve every timeout, malformed output and incomplete sample in the fixed denominator.
+
+One short-lived Azure inference container requests two vCPUs and 12 GiB RAM. It may download only the pinned public CPU runtime and model, totaling about 5.18 GB. Initial responses and final results are privately retained in Azure and local custody. Feedback travels through exactly one private phase-specific blob, with create-only write and read-only access. No generated code executes in the inference container. Generated Java continues to run only in the qualified separate Azure CPU evaluator.
+
+Maximum inference worker lifetime is three hours, with bounded host monitoring, existing-grant token refresh and owned-container cleanup. All CPU inference, grading, transfer, custody and cleanup stay within the original whole-phase $5 reserve. Do not interpret this reserve as actual billed spend. Allow one evidenced operational repair before any task output only. Stop on completion, runtime/resource bound or external access failure. Student spending limit remains enabled. Training, GPU inference, publication and submission remain paused.

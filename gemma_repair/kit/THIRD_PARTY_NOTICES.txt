@@ -1,0 +1,5 @@
+Source fixtures retain their upstream licenses and headers. Jsoup uses its MIT license, copied in cases/jsoup/LICENSE. Commons Codec and Commons Lang use Apache License 2.0 and retain their LICENSE.txt and NOTICE.txt files in each corresponding case. JFreeChart source is licensed under GNU LGPL 2.1 or later, retained in cases/jfreechart/licence-LGPL.txt.
+
+PLAN.json records exact public repository commits. Fault files and fixed method scaffolds are explicitly research modifications, not unmodified upstream releases. The two Codec units duplicate one historical commit and are not independent tasks. Retained model responses are Gemma 4 E4B outputs, not developer-written reference answers. No model weights, Java runtime, public dependency JARs or provider controllers are included in the reviewer kit. Public dependency downloaders point to hash-pinned artifacts. JaCoCo 0.8.11 is distributed by its upstream authors under the Eclipse Public License.
+
+TEBench source is excluded from this archive. Setup fetches the pinned upstream function directly and verifies its original SHA256. No TEBench software license is granted by this toolkit.

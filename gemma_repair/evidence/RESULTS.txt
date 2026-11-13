@@ -1,0 +1,57 @@
+Gemma 4 E4B paired repair study
+
+Five source-exposed repair units, four historical commits, two seeds per unit.
+Oracle qualification requires developer PASS and complete native fault FAIL.
+
+Unit | Seed | Initial qualified | Released final | Repaired final | Matched released
+--- | --- | --- | --- | --- | ---
+jsoup | 1729 | False | False | False | not applicable
+codec_standard | 1729 | False | False | False | not applicable
+codec_url | 1729 | False | False | False | not applicable
+lang | 1729 | False | False | False | not applicable
+jfreechart | 1729 | False | True | True | not applicable
+jfreechart | 2718 | True | True | True | not applicable
+lang | 2718 | False | False | False | not applicable
+codec_url | 2718 | False | False | False | not applicable
+codec_standard | 2718 | False | False | False | not applicable
+jsoup | 2718 | False | False | False | not applicable
+
+{
+  "initial_status_REJECTED": 7,
+  "initial_model_outputs_available": 9,
+  "initial_responses_missing": 1,
+  "initial_qualified": 1,
+  "initial_nonempty_source_false_pass": 0,
+  "released_qualified": 2,
+  "released_status_REJECTED": 6,
+  "released_outputs_available": 8,
+  "released_observations": 10,
+  "released_accepted_unqualified": 1,
+  "released_accepted_developer_failure": 0,
+  "released_crossgraded_source_false_pass": 0,
+  "repaired_qualified": 2,
+  "repaired_status_REJECTED": 6,
+  "repaired_outputs_available": 8,
+  "repaired_observations": 10,
+  "repaired_accepted_unqualified": 1,
+  "repaired_accepted_developer_failure": 0,
+  "repaired_crossgraded_source_false_pass": 0,
+  "both_qualified": 2,
+  "repaired_only": 0,
+  "released_only": 0,
+  "neither_qualified": 8,
+  "initial_status_COMPILE_ERROR": 1,
+  "released_status_COMPILE_ERROR": 1,
+  "repaired_status_COMPILE_ERROR": 1,
+  "released_status_GRADED": 3,
+  "repaired_status_GRADED": 3,
+  "initial_status_GRADED": 2
+}
+
+All historical tasks were source-exposed. Public-source memorization is not excluded.
+Two Codec units share a commit. Seeds, layouts, invocations and methods are not independent tasks.
+Qualification is a finite one-fault test-adequacy oracle, not exhaustive semantic correctness.
+Missing model responses are explicit availability failures. They are not fabricated patches or demonstrated semantic code errors.
+Primary policy changes feedback and stopping jointly. Matched ablation is conditional on initial developer-grader discordance.
+The conservative admission policy rejects Java Unicode escapes and method-scaffold escapes. Admission failure does not establish semantically incorrect Java.
+No post-training, swarm improvement, population accuracy, significance, leaderboard rank or competition-winning effect is established.

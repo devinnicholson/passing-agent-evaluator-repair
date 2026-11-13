@@ -1,0 +1,9 @@
+{
+  "utc": "2026-11-12T04:54:42.772329+00:00",
+  "initial_receipt_inspected": false,
+  "initial_grading_performed": false,
+  "files": {
+    "COMPUTE_MATCHED_ABLATION.txt": "a88ae18c5676be40a69f6e2490e5b18199b1b1af50475c6b6d287fd2b0cf1373",
+    "prepare_round.py": "3dfe3c06b99c1d813131d23fa6edae690b930316119999251afcf8b3307e2e58"
+  }
+}

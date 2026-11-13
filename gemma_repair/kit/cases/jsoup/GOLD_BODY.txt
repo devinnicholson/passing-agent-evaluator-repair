@@ -1,0 +1,10 @@
+
+        // https://github.com/jhy/jsoup/issues/1556
+        // escape in HTML for legibility; remove from xml
+        String input = "<a foo=\"&#x1b;esc&#x7;bell\">Text &#x1b; &#x7;</a>";
+        Document doc = Jsoup.parse(input);
+        assertEquals(input, doc.body().html());
+
+        Document xml = Jsoup.parse(input, "", Parser.xmlParser());
+        assertEquals("<a foo=\"escbell\">Text  </a>", xml.html());
+    

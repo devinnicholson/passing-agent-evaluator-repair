@@ -1,0 +1,5 @@
+
+        final String decodedText = StringUtils.newStringUsAscii(Base64.decodeBase64Url(encodedText));
+        final String encodedText2 = Base64.encodeBase64URLSafeString(StringUtils.getBytesUtf8(decodedText));
+        assertEquals(encodedText, encodedText2);
+    

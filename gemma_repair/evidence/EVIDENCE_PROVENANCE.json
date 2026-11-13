@@ -1,0 +1,73 @@
+{
+  "initial_a": {
+    "original_private_archive_sha256": "c0a53bb5ef0e1ef381c2572d984c5987994f23d5a7d8e50af8bc1fd95e700838",
+    "sanitized_scientific_archive_sha256": "6b7ab58d312d4b074c50fea05478b5a008db7708494e07dd3406b70c0ba4c8b8",
+    "curation": "Only unchanged regular study/ members. Provider-level root report excluded. Archive metadata normalized.",
+    "source_packet_sha256": "b76a748ad69bcc92983d6f4dd9a2143402909d080d0c5d21e18bcd9d1d594b30"
+  },
+  "initial_b": {
+    "original_private_archive_sha256": "704a5bf476d6d7c38b56c1275076fba6135224eea18ea31eb476e4c1ea9f5b59",
+    "sanitized_scientific_archive_sha256": "4a0734b7deb1b2cc2afca3277739b4e26240577445d8c98e7e8c4c639d6546c5",
+    "curation": "Only unchanged regular study/ members. Provider-level root report excluded. Archive metadata normalized.",
+    "source_packet_sha256": "742a2bdec54c2ee905029a7ec084e8483412942842ed7fe999e386415d9b3c65"
+  },
+  "final_a": {
+    "original_private_archive_sha256": "d8b73b47f4b960c35d65525e57a678b1989959d431a29112e6b14c37ec09c39a",
+    "sanitized_scientific_archive_sha256": "475c57edd9d10fef94e9bd2ee1dfd8464cd08d5390a565643a5279e6de77e328",
+    "curation": "Only unchanged regular study/ members. Provider-level root report excluded. Archive metadata normalized.",
+    "source_packet_sha256": "fab7bed7393a613791cd9f2ef8680d321bcde7dcbe79e45241be86917411f3f4"
+  },
+  "final_b": {
+    "original_private_archive_sha256": "fb64c8a3ee1e35b30114ddfe61f0a93a4842e127329551f6c61339f2471ade15",
+    "sanitized_scientific_archive_sha256": "0fc1085355a342e4e7b84d6f24232629bfa0f11f90cf998d6f9a19a18957a38d",
+    "curation": "Only unchanged regular study/ members. Provider-level root report excluded. Archive metadata normalized.",
+    "source_packet_sha256": "df83f5b71662577e7dd3b057894ba024b8b31debffd1720261675b21878917ed"
+  },
+  "provisional_initial_a": {
+    "original_private_archive_sha256": "a56adedc723a897d2221158a1a562c8993f4e6f98eab54c30e1d9c69bc24cc96",
+    "sanitized_scientific_archive_sha256": "9d7d90b42c0a5cee6d5b2cc1c62e0f4d2506251c50d507781ff5102bd9f4759b",
+    "curation": "Only unchanged regular study/ members. Provider-level root report excluded. Archive metadata normalized.",
+    "source_packet_sha256": "90f427678715d75760a36f595e9b37621d44b9feb1643af42838b3962a7f9157"
+  },
+  "provisional_initial_b": {
+    "original_private_archive_sha256": "d9c2eb6ba45f9d60dfd38783debdee61938755087d66b31871137ed0fa21c4a5",
+    "sanitized_scientific_archive_sha256": "00b3fec052eba7f43c1d6efa19044ec21eca51b0149b7d596c023da5a3ea0f11",
+    "curation": "Only unchanged regular study/ members. Provider-level root report excluded. Archive metadata normalized.",
+    "source_packet_sha256": "0c78969f7a042d870676df01401fb94d923e6720666761f91a2cc31dca403892"
+  },
+  "qualify_a": {
+    "original_private_archive_sha256": "e7fde0f266b8efff2736ffc965ac6ccbb2e954204ec62c644052e52301357d80",
+    "sanitized_scientific_archive_sha256": "08c742d4ec00c0ce34be59c1cc13490c980ef677a0a07a10a2b0db3fdbf490f9",
+    "curation": "Only unchanged regular study/ members. Provider-level root report excluded. Archive metadata normalized.",
+    "source_packet_sha256": "c149f591538e8e5bed32cbf6ace82ac810dd9073db9a6275ef36d2349c3be59e"
+  },
+  "qualify_b": {
+    "original_private_archive_sha256": "942dc0fbea5028fd8755d91eac3e9c17eaa67b2a4e7041529fb5db6a6ab0a02d",
+    "sanitized_scientific_archive_sha256": "6d498a859763b08688daabd7679f73713e6e2fd43fecf6b10540af3b97fcb7a0",
+    "curation": "Only unchanged regular study/ members. Provider-level root report excluded. Archive metadata normalized.",
+    "source_packet_sha256": "39be90a0198086df95e6cbcbba35a5701ae1c83daaf38b26f727207b6dc11273"
+  },
+  "coverage": {
+    "original_private_archive_sha256": "15cf845ba71202159a75a74c8ec497105bfafc92b0a2c62b5b25746b6d21d7ca",
+    "sanitized_scientific_archive_sha256": "b1ea04db51fd4ac11297c3edc3abc69fe6ef5d212fe2d3fc82228369680a2b53",
+    "curation": "Only unchanged regular study/ members. Provider-level root report excluded. Archive metadata normalized.",
+    "source_packet_sha256": "d9a920a208082484dcfff929eac56f69c142faef09ffa94eebebba965e259ff3"
+  },
+  "coverage_import_failure": {
+    "original_private_archive_sha256": "bc58f96f12b545e7b658d0b13890614c4981f8cc068394a109f0379d1e42fbbf",
+    "sanitized_scientific_archive_sha256": "f61f43f536c48b5a3a31183b16dc88af3b61acbee756fc63e9d3797dc7281b4b",
+    "curation": "Only unchanged regular study/ members. Provider-level root report excluded. Archive metadata normalized.",
+    "source_packet_sha256": "9d266fec54b5457c22fad62e4e3302b8bff9b38d515b49ae4d3dcef66d4389d0"
+  },
+  "analysis": {
+    "original_private_archive_sha256": "63dd6d61c4831876623c54695d478624529f82b49c4f7ac3219fd6cb269d82db",
+    "sanitized_scientific_archive_sha256": "42b941992f957a4bf0dc025e008040c4633c3ca60aeacd13548849a2605d477b",
+    "curation": "Only unchanged regular study/ members. Provider-level root report excluded. Archive metadata normalized.",
+    "source_packet_sha256": "5e521ec4ca0984be76e97a7580f860a7ca6dcff6a8bae2cd73b9294fe242f809"
+  },
+  "protocol": {
+    "original_private_sha256": "44dd2e8ad282daedce4f8774d1daa96bdc413b0f72686239d9dd9342e5681277",
+    "distributed_sha256": "bafa5a235921032f71680b1336269cbb9796379bf3f4f6021c7f35867af48242",
+    "redaction": "One private account identifier only. Scientific text unchanged."
+  }
+}

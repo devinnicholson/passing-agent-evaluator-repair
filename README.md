@@ -14,12 +14,23 @@ The main experiment covers two source-exposed tasks, Jsoup and Commons Codec, wi
 
 The repaired selector accepts all 14 developer-control layouts and rejects all 14 incorrect-candidate layouts. The 14 layouts are dependent perturbations of two tasks. The execution contract marks missing or incomplete invocations as INCOMPLETE.
 
+## Browse the code
+
+The source folders are exact extractions of the matching ZIPs, including fixtures, licenses and recorded evidence. The ZIP downloads are unchanged.
+
+- [Evaluator layout study](evaluator_layout/). Start with [run_study.py](evaluator_layout/run_study.py), the [execution contract](evaluator_layout/execution_contract.py) and the [JUnit listener](evaluator_layout/SuiteProbe.java).
+- [Gemma repair study](gemma_repair/). Start with [study.py](gemma_repair/kit/study.py), the [coverage diagnostic](gemma_repair/kit/coverage_diagnostic.py) and the [provenance checks](gemma_repair/kit/audit_provenance.py).
+
+Each folder retains its kit's `README.txt` and `SHA256SUMS`. The main recipe below can use the checked-in `evaluator_layout/` folder directly. From the repository root, run `cd evaluator_layout` and continue at step 2. Step 1 gives the ZIP route.
+
 ## Files
 
 | File | Purpose |
 |---|---|
 | `EVALUATOR_LAYOUT_REPLAY_KIT_v1.zip` | Main selector repair, source fixtures, native evidence, listener, count contract and dependency manifest |
 | `GEMMA_PAIRED_REPAIR_REPLAY_KIT_v2.zip` | Secondary Gemma E4B pilot, saved responses, native grades, provenance and coverage diagnostic |
+| `evaluator_layout/` | Browsable copy of the main selector kit |
+| `gemma_repair/` | Browsable copy of the secondary Gemma kit |
 | `reviewer.ipynb` | Recorded evidence replay, source identities and native reproduction instructions |
 | `SHA256SUMS` | SHA256 digests for the files in this release |
 | `LICENSE`, `NOTICE`, `THIRD_PARTY_NOTICES.txt` | License and source attribution |
