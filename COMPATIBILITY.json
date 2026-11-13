@@ -1,0 +1,28 @@
+{
+  "scope": "Licensing-packaging compatibility check using retained model outputs. No training, inference or new scientific claim.",
+  "completed": true,
+  "seven_notebook_code_cells_passed": true,
+  "cached_offline_replay_passed": true,
+  "secondary_evidence_archive_replay_passed": true,
+  "native_jsoup_documented_recipe_passed": true,
+  "native_initial_statuses_feedback_and_fault_qualification_match_saved_records": true,
+  "native_samples": [
+    "jsoup-1729",
+    "jsoup-2718"
+  ],
+  "all_26_original_evidence_files_byte_identical": true,
+  "all_recorded_notebook_outputs_unchanged": true,
+  "main_selector_kit_unchanged": true,
+  "upstream_predicate_sha256": "ab234efdf0ef0a6b735ee588cea352e305256f95df8427474b9a1d0d086c92c2",
+  "tested_secondary_archive_sha256": "63358b8b53e154830959cfd71c76a5663df8a2a3c1fdba9709216e46a1dfb592",
+  "published_secondary_archive_sha256": "dc3756c665abc8974d5f5f158e812c31e0b9a8dbf21a7a1776155b9c790ec5b2",
+  "packaging_difference": "Published archive adds .gitignore and regenerates SHA256SUMS. Every other archive member matches the checked archive. Published notebook additionally updates the archive digest and prose.",
+  "attempts": 2,
+  "first_attempt": "All notebook, offline, evidence and fetch checks passed. Native driver failed because its added Python isolation flags excluded local modules. Failure retained.",
+  "second_attempt": "Documented native command passed.",
+  "worker_deleted": true,
+  "private_result_archive_sha256": "233c4fa8986e0ae9d93c1c104ad71712b0050fe5fe4b77637e367d34b80fb860",
+  "training_performed": false,
+  "model_inference_performed": false,
+  "kaggle_changed_by_this_phase": false
+}

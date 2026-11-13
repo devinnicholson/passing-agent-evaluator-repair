@@ -24,6 +24,7 @@ The repaired selector accepts all 14 developer-control layouts and rejects all 1
 | `SHA256SUMS` | SHA256 digests for the files in this release |
 | `LICENSE`, `NOTICE`, `THIRD_PARTY_NOTICES.txt` | License and source attribution |
 | `CITATION.cff` | Citation metadata for this resource |
+| `COMPATIBILITY.json` | Fresh CPU checks of the upstream-fetch packaging change |
 
 The main selector ZIP is unchanged. Secondary kit v2 removes the copied TEBench predicate and fetches the checksum-identical function during setup. Its recorded evidence, model responses and native results are byte-identical to v1. Updated manifests identify the new packaging. The public notebook preserves the recorded outputs from Kaggle version 6. Section 1b replaces its embedded upstream functions with checksum-verified downloads. The submitted Kaggle artifacts remain unchanged. Its default cells check saved evidence. Section 1b downloads checksum-pinned upstream functions on first use and caches them locally. Run with internet access initially, or run `python3.12 fetch_tebench.py` from the notebook working directory first. Later cached replay works offline. Fresh native execution uses the commands below.
 
@@ -70,6 +71,8 @@ Each case should record 42 native executions. Both reports should have `complete
 For Figure 1, inspect the original-layout authored Jsoup candidate. The released selector starts one passing test and receives contract INCOMPLETE. The compiled inventory starts two tests, including one assertion failure, and receives contract FAIL. Both observations belong to the 84-execution study.
 
 Compiler versions can change artifact hashes. Exact cross-run bytecode comparisons require the recorded JDK. Within each run, every admitted transformed classfile map must match its original role.
+
+The upstream-fetch change passed a fresh Azure CPU check of all seven notebook code cells, cached offline replay, the full secondary evidence archive and the documented native Jsoup recipe. The native statuses, feedback and fault qualification matched the saved initial observations. `COMPATIBILITY.json` records the checked archive hash and the final packaging difference.
 
 ## Secondary Gemma evidence
 
